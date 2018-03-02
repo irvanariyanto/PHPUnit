@@ -5,61 +5,61 @@ use PHPUnit\Framework\TestCase;
 
 class UserTest extends TestCase
 {
-	public function testThatWeGetTheFirstName()
+	protected $user;
+
+	public function setUp(){
+		$this->user = new \App\Models\User;
+	}
+
+	/** @test */
+	public function that_we_get_the_first_name()
 	{
-		$user = new \App\Models\User;
 
-		$user->setFirstName('Billy');
+		$this->user->setFirstName('Billy');
 
-		$this->assertEquals($user->getFirstName(), 'Billy');
+		$this->assertEquals($this->user->getFirstName(), 'Billy');
 	}
 
 	public function testThatWeGetTheLastName()
 	{
-		$user = new \App\Models\User;
 
-		$user->setLastName('Garrett');
+		$this->user->setLastName('Garrett');
 
-		$this->assertEquals($user->getLastName(), 'Garrett');
+		$this->assertEquals($this->user->getLastName(), 'Garrett');
 	}
 
 	public function testThatFullNameIsReturned(){
-		$user = new \App\Models\User;
 
-		$user->setFirstName('Billy');
-		$user->setLastName('Garrett');
+		$this->user->setFirstName('Billy');
+		$this->user->setLastName('Garrett');
 
-		$this->assertEquals($user->getFullName(), 'Billy Garrett');
+		$this->assertEquals($this->user->getFullName(), 'Billy Garrett');
 			
 	}
 
 	public function testFirstAndLastNameAreTrimmed(){
-		$user = new \App\Models\User;
 
-		$user->setFirstName('Billy    ');
-		$user->setLastName('    Garrett');
+		$this->user->setFirstName('Billy    ');
+		$this->user->setLastName('    Garrett');
 
-		$this->assertEquals($user->getFirstName(), 'Billy');
-		$this->assertEquals($user->getLastName(), 'Garrett');
+		$this->assertEquals($this->user->getFirstName(), 'Billy');
+		$this->assertEquals($this->user->getLastName(), 'Garrett');
 	}
 
 	public function testEmailAddressCanBeSet(){
 
-		$user = new \App\Models\User;
+		$this->user->setEmail('billy@codecourse.com');
 
-		$user->setEmail('billy@codecourse.com');
-
-		$this->assertEquals($user->getEmail(),'billy@codecourse.com');
+		$this->assertEquals($this->user->getEmail(),'billy@codecourse.com');
 	}
 
 	public function testEmailVariableContainCorrectValues(){
-		$user = new \App\Models\User;
 
-		$user->setFirstName('Billy');
-		$user->setLastName('Garrett');
-		$user->setEmail('billy@codecourse.com');
+		$this->user->setFirstName('Billy');
+		$this->user->setLastName('Garrett');
+		$this->user->setEmail('billy@codecourse.com');
 
-		$emailVariables = $user->GetEmailVariables();
+		$emailVariables = $this->user->GetEmailVariables();
 
 		$this->assertArrayHasKey('full_name',$emailVariables);
 		$this->assertArrayHasKey('email',$emailVariables);
