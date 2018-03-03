@@ -66,7 +66,9 @@ class ComposerStaticInit3dfa9a6579e27ede07736d9da64f3f7e
 
     public static $classMap = array (
         'App\\Calculator\\Addition' => __DIR__ . '/../..' . '/App/Calculator/Addition.php',
+        'App\\Calculator\\Division' => __DIR__ . '/../..' . '/App/Calculator/Division.php',
         'App\\Calculator\\Exceptions\\NoOperandsException' => __DIR__ . '/../..' . '/App/Calculator/Exceptions/NoOperandsException.php',
+        'App\\Calculator\\OperationAbstract' => __DIR__ . '/../..' . '/App/Calculator/OperationAbstract.php',
         'App\\Calculator\\OperationInterface' => __DIR__ . '/../..' . '/App/Calculator/OperationInterface.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/App/Models/User.php',
         'App\\Support\\Collection' => __DIR__ . '/../..' . '/App/Support/Collection.php',
