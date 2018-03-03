@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Calculator\\Addition' => $baseDir . '/App/Calculator/Addition.php',
+    'App\\Calculator\\Calculator' => $baseDir . '/App/Calculator/Calculator.php',
     'App\\Calculator\\Division' => $baseDir . '/App/Calculator/Division.php',
     'App\\Calculator\\Exceptions\\NoOperandsException' => $baseDir . '/App/Calculator/Exceptions/NoOperandsException.php',
     'App\\Calculator\\OperationAbstract' => $baseDir . '/App/Calculator/OperationAbstract.php',
