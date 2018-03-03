@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Calculator\\Addition' => $baseDir . '/App/Calculator/Addition.php',
+    'App\\Calculator\\Exceptions\\NoOperandsException' => $baseDir . '/App/Calculator/Exceptions/NoOperandsException.php',
+    'App\\Calculator\\OperationInterface' => $baseDir . '/App/Calculator/OperationInterface.php',
     'App\\Models\\User' => $baseDir . '/App/Models/User.php',
     'App\\Support\\Collection' => $baseDir . '/App/Support/Collection.php',
     'DeepCopy\\DeepCopy' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',

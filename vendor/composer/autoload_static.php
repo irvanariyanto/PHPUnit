@@ -65,6 +65,9 @@ class ComposerStaticInit3dfa9a6579e27ede07736d9da64f3f7e
     );
 
     public static $classMap = array (
+        'App\\Calculator\\Addition' => __DIR__ . '/../..' . '/App/Calculator/Addition.php',
+        'App\\Calculator\\Exceptions\\NoOperandsException' => __DIR__ . '/../..' . '/App/Calculator/Exceptions/NoOperandsException.php',
+        'App\\Calculator\\OperationInterface' => __DIR__ . '/../..' . '/App/Calculator/OperationInterface.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/App/Models/User.php',
         'App\\Support\\Collection' => __DIR__ . '/../..' . '/App/Support/Collection.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
